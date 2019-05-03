@@ -69,7 +69,7 @@
     </where>
   </sql>
   <select id="selectAllInstitution" resultType="java.lang.String">
-    select DISTINCT dept from baseinfo
+    select DISTINCT dept from baseinfo where dept is not null
   </select>
   <sql id="Base_Column_List" >
     ouid, name, dept, idcard, xingzuo, sheng, shi
