@@ -58,7 +58,7 @@
                 }
             });
 
-            //异步加载书籍借阅排行百人榜
+            //异步加载书籍畅销榜
             $.ajax({
                 url: '/bookborrow/getBookBorrowRank',
                 type: 'get',
@@ -69,7 +69,7 @@
                         $("#rank_data").append("<tr><td><span class='num-span no1'>"
                             + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
                             "href='#' class='mg0'> <div class='word'> <span>" +
-                            n.name + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
+                            n.title + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
                     });
                     $("#rank_data").append("</tbody>");
                 }, error: function () {
@@ -93,7 +93,7 @@
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
                                     "href='#' class='mg0'> <div class='word'> <span>" +
-                                    n.name + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
+                                    n.title + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
                         }, error: function () {
@@ -112,7 +112,7 @@
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
                                     "href='#' class='mg0'> <div class='word'> <span>" +
-                                    n.name + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
+                                    n.title + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
                         }, error: function () {
@@ -131,7 +131,7 @@
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
                                     "href='#' class='mg0'> <div class='word'> <span>" +
-                                    n.name + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
+                                    n.title + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
                         }, error: function () {
@@ -150,7 +150,7 @@
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
                                     "href='#' class='mg0'> <div class='word'> <span>" +
-                                    n.name + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
+                                    n.title + "</span></div></a></td><td>" + n.category + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
                         }, error: function () {

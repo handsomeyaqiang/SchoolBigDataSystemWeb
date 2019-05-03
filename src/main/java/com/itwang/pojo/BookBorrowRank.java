@@ -10,9 +10,17 @@ package com.itwang.pojo;
  * @Version: 1.0
  */
 public class BookBorrowRank {
-    private String name;//借书名字
+    private String title;//借书名字
     private String category;//类别
     private String count;//借阅数量
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getCategory() {
         return category;
@@ -22,13 +30,6 @@ public class BookBorrowRank {
         this.category = category;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getCount() {
         return count;
@@ -41,7 +42,7 @@ public class BookBorrowRank {
     @Override
     public String toString() {
         return "BookBorrowRank{" +
-                "name='" + name + '\'' +
+                "title='" + title + '\'' +
                 ", category='" + category + '\'' +
                 ", count='" + count + '\'' +
                 '}';

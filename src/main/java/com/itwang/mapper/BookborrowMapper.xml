@@ -95,8 +95,8 @@
   </select>
 <select id="getBookBorrowRank" resultType="com.itwang.pojo.BookBorrowRank">
     SELECT
-        TSMC AS name,
-        count(*) AS total,
+        TSMC AS title,
+        count(*) AS count,
         TSLB as category
     FROM
         bookborrow b
@@ -110,9 +110,9 @@
       </if>
     </where>
     GROUP BY
-        name
+      title
     ORDER BY
-        total DESC
+      count DESC
     limit 100
 </select>
   <delete id="deleteByExample" parameterType="com.itwang.pojo.BookborrowExample" >
