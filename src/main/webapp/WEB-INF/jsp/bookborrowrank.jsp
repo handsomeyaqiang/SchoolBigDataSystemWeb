@@ -12,6 +12,7 @@
     <meta name="csrf-token" content="OEoyeWZERmhUAWYUEg0DEWsTBzcNExQvThtQLBUhNjdzCX8IVh03Ig==">
     <title>榜单首页</title>
     <script src="/js/echarts.js"></script>
+    <script src="/js/common/dataprocess.js"></script>
     <script src="/js/echarts-wordcloud.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/theme/macarons.js"></script>
@@ -68,8 +69,8 @@
                     $(res).each(function (i, n) {
                         $("#rank_data").append("<tr><td><span class='num-span no1'>"
                             + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
-                            "href='" + n.outid + "' class='mg0'> <div class='word'> <h1>" +
-                            n.outid + "</h1></div></a></td><td>" + n.name + "</td><td>" + n.dept
+                            "href='" + processOutid(n.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                            processOutid(n.outid) + "</h1></div></a></td><td>" + processName(n.name) + "</td><td>" + n.dept
                             + "</td><td>" + n.count + "</td></tr>");
                     });
                     $("#rank_data").append("</tbody>");
@@ -93,8 +94,8 @@
                             $(res).each(function (i, n) {
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.outid + "</h1></div></a></td><td>" + n.name + "</td><td>" + n.dept
+                                    "href='" + processOutid(n.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.outid) + "</h1></div></a></td><td>" + processName(n.name) + "</td><td>" + n.dept
                                     + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
@@ -113,8 +114,8 @@
                             $(res).each(function (i, n) {
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.outid + "</h1></div></a></td><td>" + n.name + "</td><td>" + n.dept
+                                    "href='" + processOutid(n.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.outid) + "</h1></div></a></td><td>" + processName(n.name) + "</td><td>" + n.dept
                                     + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
@@ -133,8 +134,8 @@
                             $(res).each(function (i, n) {
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.outid + "</h1></div></a></td><td>" + n.name + "</td><td>" + n.dept
+                                    "href='" + processOutid(n.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.outid) + "</h1></div></a></td><td>" + processName(n.name) + "</td><td>" + n.dept
                                     + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
@@ -153,8 +154,8 @@
                             $(res).each(function (i, n) {
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + (i + 1) + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.outid + "</h1></div></a></td><td>" + n.name + "</td><td>" + n.dept
+                                    "href='" + processOutid(n.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.outid) + "</h1></div></a></td><td>" + processName(n.name) + "</td><td>" + n.dept
                                     + "</td><td>" + n.count + "</td></tr>");
                             });
                             $("#rank_data").append("</tbody>");
@@ -190,8 +191,8 @@
                                 $("#rank_data").append("<tbody>");
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + n.rank + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.person.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.person.outid + "</h1></div></a></td><td>" + n.person.name + "</td><td>" + n.person.dept
+                                    "href='" + processOutid(n.person.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.person.outid) + "</h1></div></a></td><td>" + processName(n.person.name) + "</td><td>" + n.person.dept
                                     + "</td><td>" + n.person.count + "</td></tr>");
                                 $("#rank_data").append("</tbody>");
                             }, error: function () {
@@ -208,8 +209,8 @@
                                 $("#rank_data").append("<tbody>");
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + n.rank + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.person.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.person.outid + "</h1></div></a></td><td>" + n.person.name + "</td><td>" + n.person.dept
+                                    "href='" + processOutid(n.person.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.person.outid) + "</h1></div></a></td><td>" + processName(n.person.name) + "</td><td>" + n.person.dept
                                     + "</td><td>" + n.person.count + "</td></tr>");
                                 $("#rank_data").append("</tbody>");
                             }, error: function () {
@@ -226,8 +227,8 @@
                                 $("#rank_data").append("<tbody>");
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + n.rank + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.person.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.person.outid + "</h1></div></a></td><td>" + n.person.name + "</td><td>" + n.person.dept
+                                    "href='" + processOutid(n.person.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.person.outid) + "</h1></div></a></td><td>" + processName(n.person.name) + "</td><td>" + n.person.dept
                                     + "</td><td>" + n.person.count + "</td></tr>");
                                 $("#rank_data").append("</tbody>");
                             }, error: function () {
@@ -245,8 +246,8 @@
 
                                 $("#rank_data").append("<tr><td><span class='num-span no1'>"
                                     + n.rank + "</span></td><td>" + "<a target='_blank' " +
-                                    "href='" + n.person.outid + "' class='mg0'> <div class='word'> <h1>" +
-                                    n.person.outid + "</h1></div></a></td><td>" + n.person.name + "</td><td>" + n.person.dept
+                                    "href='" + processOutid(n.person.outid) + "' class='mg0'> <div class='word'> <h1>" +
+                                    processOutid(n.person.outid) + "</h1></div></a></td><td>" + processName(n.person.name) + "</td><td>" + n.person.dept
                                     + "</td><td>" + n.person.count + "</td></tr>");
 
                                 $("#rank_data").append("</tbody>");
@@ -342,13 +343,13 @@
                         </div>
                     </div>
 
-                    <div class="form-inline mr fl">
-                        <div class="form-group">
-                            <button name="myrank_query" value="myrank"
-                                    style="background-color: #f5f1f0; width: 70px;height: 34px;">我的排名
-                            </button>
-                        </div>
-                    </div>
+                    <%--<div class="form-inline mr fl">--%>
+                        <%--<div class="form-group">--%>
+                            <%--<button name="myrank_query" value="myrank"--%>
+                                    <%--style="background-color: #f5f1f0; width: 70px;height: 34px;">我的排名--%>
+                            <%--</button>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
                     <div class="form-inline mr fl">
                         <div class="form-group">
                             <button name="rank_query" id="rank_query" value="myrank"
