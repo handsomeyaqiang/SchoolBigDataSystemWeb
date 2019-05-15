@@ -314,7 +314,7 @@
                 <div class="hd clearfix">
                     <div class="tab-warp fl">
                         <a class="active" href="/toBookBorrowRankIndex">图书借阅榜</a>
-                        <a href="/toBookRankIndex">书籍畅销榜</a>
+                        <a href="/toBookRankIndex">书籍常阅榜</a>
                         <a href="/toBookBorrowXingZuoRankIndex">图书借阅星座榜</a>
                         <a href="/toBookBorrowInstitutionRankIndex">图书借阅学院榜</a>
                         <a href="/toConsumeInstitutionRankIndex">一卡通消费学院榜</a>
