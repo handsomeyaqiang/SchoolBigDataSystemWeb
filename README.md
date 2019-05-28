@@ -1,7 +1,7 @@
 # SchoolBigDataSystemWeb
 
 #### 介绍
-本项目是根据大数据分析后的结果利用echarts进行设计并数据结果可视化展示的Javaweb项目,分析项目在SchoolBigDataAnalysis
+本项目是根据大数据分析后的结果利用echarts进行设计并数据结果可视化展示的Javaweb项目,分析项目在[SchoolBigDataAnalysis](https://gitee.com/love_code_man/SchoolBigDataAnalysis)
 
 #### 软件架构
 IDEA+Maven
